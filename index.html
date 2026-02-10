@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>جهاز رسم ثابت</title>
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  pointer-events: none; /* الصورة ثابتة */
+}
+</style>
+</head>
+<body>
+
+<img src="file_00000000b5a871f5bdf834ffb6400d49.png" alt="Neon Lion">
+
+<script>
+// منع كليك يمين
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+// منع اختصارات متكررة
+document.addEventListener("keydown", e => {
+  if (
+    e.key === "PrintScreen" ||            // PrintScreen
+    (e.ctrlKey && e.key === "s") ||      // Ctrl + S
+    (e.ctrlKey && e.key === "c") ||      // Ctrl + C
+    (e.ctrlKey && e.key === "u") ||      // Ctrl + U
+    (e.ctrlKey && e.key === "p")         // Ctrl + P
+  ) {
+    e.preventDefault();
+    e.stopPropagation();
+    alert("هذا الجهاز ثابت، لا يمكن التفاعل.");
+  }
+});
+
+// منع لمس أو سحب الشاشة
+document.addEventListener("touchstart", e => e.preventDefault(), { passive: false });
+document.addEventListener("touchmove", e => e.preventDefault(), { passive: false });
+document.addEventListener("touchend", e => e.preventDefault(), { passive: false });
+
+// منع الضغط على الفأرة
+document.addEventListener("mousedown", e => e.preventDefault());
+document.addEventListener("mouseup", e => e.preventDefault());
+</script>
+
+</body>
+</html>
