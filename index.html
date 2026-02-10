@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>جهاز رسم ثابت</title>
+<title>جهاز رسم ثابت - نمر</title>
 <style>
 html, body {
   margin: 0;
@@ -28,7 +28,7 @@ img {
 </head>
 <body>
 
-<img src="file_00000000b5a871f5bdf834ffb6400d49.png" alt="Neon Lion">
+<img src="file_00000000b7d071f5a3410d81289d90cf.png" alt="Neon Tiger">
 
 <script>
 // منع كليك يمين
@@ -37,11 +37,11 @@ document.addEventListener("contextmenu", e => e.preventDefault());
 // منع اختصارات متكررة
 document.addEventListener("keydown", e => {
   if (
-    e.key === "PrintScreen" ||            // PrintScreen
-    (e.ctrlKey && e.key === "s") ||      // Ctrl + S
-    (e.ctrlKey && e.key === "c") ||      // Ctrl + C
-    (e.ctrlKey && e.key === "u") ||      // Ctrl + U
-    (e.ctrlKey && e.key === "p")         // Ctrl + P
+    e.key === "PrintScreen" ||            
+    (e.ctrlKey && e.key === "s") ||      
+    (e.ctrlKey && e.key === "c") ||      
+    (e.ctrlKey && e.key === "u") ||      
+    (e.ctrlKey && e.key === "p")         
   ) {
     e.preventDefault();
     e.stopPropagation();
